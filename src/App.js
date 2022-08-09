@@ -32,8 +32,10 @@ const App = () => {
 
     const deleteNote = (id) => {
       const newNotes = notes.filter((note) => note.id !== id);
+		  setNotes(newNotes);
       setNotes(newNotes); 
-  }
+		  setNotes(newNotes);
+    };
 
   return (
 		<div className={`${darkMode && 'dark-mode'}`}>
@@ -49,7 +51,7 @@ const App = () => {
 				/>
 			</div>
 		</div>
-  )
-}
+	);
+};
 
 export default App;
